@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <script>
+        //Завдання 18
+        document.write('<hr>');
+        document.write('<h2>Завдання №18</h2>');
+        let styles = ['Jazz', 'Blues'];
+        document.write('<p>' + styles + '</p>');
+        styles.push('Rock-n-Roll');
+        document.write('<p>' + styles + '</p>');
+        const middleIndex = Math.floor(styles.length / 2);
+        styles[middleIndex] = 'Classics';
+        document.write('<p>' + styles + '</p>');
+        const removedElement = styles.shift();
+        document.write('<p>' + styles + '</p>');
+        styles.unshift('Rap', 'Reggae');
+        document.write('<p>' + styles + '</p>');
+        document.write('<hr>');
+
+        //Завдання 19
+        document.write('<h2>Завдання №19</h2>');
+        function camelize(str) {
+            var words = str.split('-');
+            for (var i = 1; i < words.length; i++) {
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+            return words.join('');
+        }
+        document.write('<p>' + camelize('my-short-string') + '</p>');
+        document.write('<hr>');
+
+        //Завдання 20
+        document.write('<h2>Завдання №20</h2>');
+        function filterRange(arr, a, b) {
+            // Новий масив для збереження відфільтрованих елементів
+            var filteredArr = [];
+             // Проходимо по всіх елементах в початковому масиві
+            for (var i = 0; i < arr.length; i++) {
+                // Перевіряємо, чи поточний елемент належить діапазону [a, b]
+                if (arr[i] >= a && arr[i] <= b) {
+                    filteredArr.push(arr[i]);
+                }
+            }
+            return filteredArr;
+        }
+        let arr = [5, 3, 8, 1];
+        let filtered = filterRange(arr, 1, 4);
+        document.write('<p>' + filtered + '</p>');
+        document.write('<p>' + arr + '</p>');
+        document.write('<hr>'); 
+        
+        //Завдання 21
+        document.write('<h2>Завдання №21</h2>');
+        function copySorted(arr) {
+            // Створюємо копію масиву та сортуємо її
+            let sortedArr = arr.slice().sort();
+            document.write('<p>' + sortedArr + '</p>');
+            document.write('<p>' + arr + '</p>');
+            return sortedArr;
+        }
+        let arr2 = ["HTML", "JavaScript", "CSS"];
+        let sortedArr = copySorted(arr2);
+        document.write('<hr>'); 
+        
+        //Завдання 22
+        document.write('<h2>Завдання №22</h2>');
+        function sortByAge(users) {
+            users.sort(function(a, b) {
+                return a.age - b.age;
+            });
+        }
+
+        let ivan = { name: "Іван", age: 25 };
+        let petro = { name: "Петро", age: 30 };
+        let mariya = { name: "Марія", age: 28 };
+
+        let arr3 = [petro, ivan, mariya];
+        sortByAge(arr3);
+
+        document.write('<p>' + arr3[0].name + '</p>');
+        document.write('<p>' + arr3[1].name + '</p>');
+        document.write('<p>' + arr3[2].name + '</p>');
+        document.write('<hr>'); 
+
+        //Завдання 23
+        document.write('<h2>Завдання №23</h2>');
+        function getAverageAge(users) {
+            if (users.length === 0) {
+                return 0;
+            }
+
+            const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+            const averageAge = totalAge / users.length;
+
+            return averageAge;
+        }
+
+        let john = { name: "John", age: 25 };
+        let pete = { name: "Pete", age: 30 };
+        let mary = { name: "Mary", age: 29 };
+
+        let arr4 = [john, pete, mary];
+
+        document.write('<p>' + getAverageAge(arr4) + '</p>');
+        document.write('<hr>'); 
+
+        //Завдання 24
+        document.write('<h2>Завдання №24</h2>');
+        function groupById(arr) {
+            return arr.reduce((acc, user) => {
+                acc[user.id] = user;
+                return acc;
+            }, {});
+        }
+
+        let users = [
+            {id: 'іван', name: "Іван Іванко", age: 20},
+            {id: 'ганна', name: "Ганна Іванко", age: 24},
+            {id: 'петро', name: "Петро Петренко", age: 20},
+        ];
+
+        let userById = groupById(users);
+
+        for (let userId in userById) {
+            if (userById.hasOwnProperty(userId)) {
+                let user = userById[userId];
+                document.write(`<p>Користувач з id ${userId}: ${user.name}</p>`);
+            }
+        }
+        document.write('<hr>');  
+        
+        //Завдання 25
+        document.write('<h2>Завдання №25</h2>');
+        function sumSalaries(salaries) {
+            const salaryValues = Object.values(salaries);
+            let totalSalary = 0;
+
+            for (const salary of salaryValues) {
+                totalSalary += salary;
+            }
+            return totalSalary;
+        }
+
+        let salaries = {
+            "Іван": 100,
+            "Петро": 300,
+            "Марія": 250
+        };
+
+        document.write(sumSalaries(salaries));
+        document.write('<hr>');  
+    </script>
+</body>
+</html>

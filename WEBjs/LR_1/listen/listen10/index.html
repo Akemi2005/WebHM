@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h1>Список студентів</h1>
+    <div id="studentsList"></div>
+    <script>
+        var numberOfStudents = parseInt(prompt('Введіть кількість учнів в студентській групі:'));
+        if (!isNaN(numberOfStudents) && numberOfStudents > 0) {
+            // Створюємо пустий рядок для зберігання імен і прізвищ учнів
+            var studentsListHTML = '';
+            for (var i = 1; i <= numberOfStudents; i++) {
+                var studentName = prompt('Введіть ім\'я учня ' + i + ':');
+                var studentLastName = prompt('Введіть прізвище учня ' + i + ':');
+                studentsListHTML += '<p>' + i + ': ' + studentLastName + ' ' + studentName + '</p>';
+            }
+            document.getElementById('studentsList').innerHTML = studentsListHTML;
+        } else {
+            alert('Будь ласка, введіть коректну кількість учнів.');
+        }
+    </script>
+</body>
+</html>

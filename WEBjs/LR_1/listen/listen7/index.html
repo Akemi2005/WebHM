@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <script>
+        var num1 = parseFloat(prompt('Будь ласка, введіть перше число:'));
+        var num2 = parseFloat(prompt('Будь ласка, введіть друге число:'));
+        // Перевіряємо, чи введені значення є числами
+        if (!isNaN(num1) && !isNaN(num2)) {
+            // Знаходимо найбільше число за допомогою тернарного оператора
+            var maxNumber = (num1 > num2) ? num1 : num2;
+            // Виводимо найбільше число у вікні браузера
+            alert('Найбільше число: ' + maxNumber);
+        } else {
+            alert('Будь ласка, введіть коректні числа.');
+        }
+    </script>
+</body>
+</html>

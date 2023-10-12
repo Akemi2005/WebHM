@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h1>Введенні прізвища та імена</h1>
+    <div id="namesList"></div>
+    <script>
+        var namesListHTML = ''; // Рядок для зберігання імен і прізвищ
+        while (true) {
+            var fullName = prompt('Введіть прізвище та ім\'я:');
+            if (fullName === null) {
+                break;
+            } else {
+                namesListHTML += '<p>' + fullName + '</p>'; // Додаємо ім'я та прізвище до списку
+            }
+        }
+        // Виводимо список прізвищ і імен на сторінці
+        document.getElementById('namesList').innerHTML = namesListHTML;
+    </script>
+</body>
+</html>

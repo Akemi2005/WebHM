@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Таблиця множення</h1>
+    <table>
+        <tbody id="multiplicationTable"></tbody>
+    </table>
+    <script>
+        var tBody = document.getElementById('multiplicationTable');
+        var numRows = 10;
+        var numCols = 10;
+
+        for (var i = 1; i <= numRows; i++) {
+            var row = document.createElement('tr');
+            for (var j = 1; j <= numCols; j++) {
+                var cell = document.createElement('td');
+                cell.textContent = i + ' x ' + j + ' = ' + (i * j);
+                row.appendChild(cell);
+            }
+            tBody.appendChild(row);
+        }
+    </script>
+</body>
+</html>

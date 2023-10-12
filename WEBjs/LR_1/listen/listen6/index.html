@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <input type="text" id="number1" placeholder="Введіть перше число">
+    <input type="text" id="number2" placeholder="Введіть друге число">
+    <button id="calculateButton">Скласти числа</button>
+    <p id="result"></p>
+    <script>
+        document.getElementById('calculateButton').addEventListener('click', function() {
+            var num1 = parseFloat(document.getElementById('number1').value);
+            var num2 = parseFloat(document.getElementById('number2').value);
+            // Перевірка на коректність введених значень
+            if (!isNaN(num1) && !isNaN(num2)) {
+                // Виконуємо операцію складання
+                var sum = num1 + num2;
+                // Виводимо результат
+                document.getElementById('result').textContent = 'Результат: ' + sum;
+            } else {
+                alert('Будь ласка, введіть коректні числа.');
+            }
+        });
+    </script>
+</body>
+</html>

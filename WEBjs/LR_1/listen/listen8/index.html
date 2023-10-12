@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <script>
+        var monthNumber = parseInt(prompt('Будь ласка, введіть номер місяця (1-12):'));
+        // Перевіряємо, чи введене значення є числом та в діапазоні від 1 до 12
+        if (!isNaN(monthNumber) && monthNumber >= 1 && monthNumber <= 12) {
+            var season;
+            if (monthNumber >= 3 && monthNumber <= 5) {
+                season = 'весна';
+            } else if (monthNumber >= 6 && monthNumber <= 8) {
+                season = 'літо';
+            } else if (monthNumber >= 9 && monthNumber <= 11) {
+                season = 'осінь';
+            } else {
+                season = 'зима';
+            }
+            alert('Пора року: ' + season);
+        } else {
+            alert('Будь ласка, введіть коректний номер місяця (від 1 до 12).');
+        }
+    </script>
+</body>
+</html>
