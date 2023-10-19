@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h2>2. Напишіть функцію getWeekDay(date), щоб показати робочий день у короткому
+        форматі: ПН, ВТ, СР, ЧТ, ПТ, СБ, НД.</h2>
+    <script>
+        function getWeekDay(date) {
+            const daysOfWeek = ["НД", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"];
+            return daysOfWeek[date.getDay()];
+        }
+        let date = new Date(2012, 0, 3);
+        document.write(getWeekDay(date));
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h2>3. Напишіть функцію getLastDayOfMonth(year, month), що повертає останній день
+        місяця. Іноді це 30-е, 31-ше або 28/29-е для лютого.</h2>
+    <script>
+        function getLastDayOfMonth(year, month) {
+            const lastDay = new Date(year, month + 1, 0).getDate();
+            return lastDay;
+        }
+        const year = 2020;
+        const month = 1;
+        const lastDay = getLastDayOfMonth(year, month);
+        document.write(lastDay);
+    </script>
+</body>
+</html>

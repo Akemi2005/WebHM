@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h2>4. Створіть функцію getSecondsToTomorrow(), що повертає кількість секунд до завтра.</h2>
+    <script>
+        function getSecondsToTomorrow() {
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setDate(now.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            // Розраховуємо різницю в секундах між завтрашньою датою та поточною датою.
+            const secondsToTomorrow = (tomorrow - now) / 1000;
+            return secondsToTomorrow;
+        }
+        const secondsUntilTomorrow = getSecondsToTomorrow();
+        document.write(secondsUntilTomorrow);
+    </script>
+</body>
+</html>
