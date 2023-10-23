@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h2>3. Створіть ефект друкарської машинки, виводячи будь-яку заздалегідь заготовлену
+        фразу або попросивши користувача ввести її. Розв'яжіть задачу за допомогою
+        setInterval() та setTimeout().</h2>
+        <div id="printer-text"></div>
+        <script>
+            const phrase = "Hello World!";
+            const printerTextElement = document.getElementById("printer-text");
+            // Початковий індекс символу
+            let charIndex = 0;
+            function printText() {
+                if (charIndex < phrase.length) {
+                    const char = phrase.charAt(charIndex);
+                    printerTextElement.innerHTML += char;
+                    charIndex++;
+                } else {
+                    clearInterval(printerInterval);
+                }
+            }
+            // затримкf між символами
+            const printInterval = 100;
+            const printerInterval = setInterval(printText, printInterval);
+        </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h2>2.2 Створіть веб-сторінку із часом, що оновлюється кожні 5 секунд. При проходженні
+        30 секунд сторінка повинна закриватися.</h2>
+    <script>
+        function formatTimeUnit(unit) {
+            if (unit < 10) {
+                return "0" + unit;
+            } else {
+                return unit.toString();
+            }
+        }
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var formattedTime = formatTimeUnit(hours) + ":" + formatTimeUnit(minutes) + ":" + formatTimeUnit(seconds);
+            document.getElementById("clock2").innerText = formattedTime;
+        }
+
+        // Викликаємо функцію оновлення годинника кожні 5 секунд
+        setInterval(updateClock, 5000);
+
+        document.write('<div id="clock2"></div>')
+    </script>
+</body>
+</html>

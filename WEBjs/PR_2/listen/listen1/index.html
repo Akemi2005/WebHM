@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h2>1. Напишіть функцію на основі практичного прикладу годинника, яка додаватиме ”0” до
+        значення годин, хвилин або секунд, якщо поточне значення менше 10.</h2>
+    <script>
+        function formatTimeUnit(unit) {
+            if (unit < 10) {
+                return "0" + unit;
+            } else {
+                return unit.toString();
+            }
+        }
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var formattedTime = formatTimeUnit(hours) + ":" + formatTimeUnit(minutes) + ":" + formatTimeUnit(seconds);
+            document.getElementById("clock").innerText = formattedTime;
+        }
+        setInterval(updateClock, 1000);
+        document.write('<div id="clock"></div>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h2>4. Попросіть користувача ввести суму (типу ставка на результат боксерського змагання
+        тощо). Згенеруйте випадкове число в діапазоні від -5 до 5. Через 1 секунду виведіть
+        користувачу інформацію про те, що він "виграв" або "програв" з такою логікою: якщо
+        випадкове число негативне або дорівнює 0 - він "не вгадав" зі своєю ставкою . Якщо
+        число позитивне, то ви множите суму ставки на це число і виводите користувачеві, що
+        він виграв... гривень. Наприклад, користувач ввів 1000, випало число 5 – виграв 5000.</h2>
+    <h2>Введіть суму ставки:</h2>
+    <input type="text" id="betAmount">
+    <button onclick="playGame()">Грати</button>
+    <p id="result"></p>
+    <script>
+        function playGame() {
+            const betAmount = parseFloat(document.getElementById("betAmount").value);
+            if (isNaN(betAmount)) {
+                document.getElementById("result").innerText = "Будь ласка, введіть суму ставки.";
+                return;
+            }
+            setTimeout(function () {
+                const randomValue = Math.floor(Math.random() * 11) - 5; // Випадкове число від -5 до 5
+                let resultMessage;
+                if (randomValue <= 0) {
+                    resultMessage = "Ви програли.";
+                } else {
+                    const winnings = betAmount * randomValue;
+                    resultMessage = `Ви виграли ${winnings}₴!`;
+                }
+                document.getElementById("result").innerText = resultMessage;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
