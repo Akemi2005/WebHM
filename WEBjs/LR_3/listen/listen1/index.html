@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+</head>
+<body>
+    <h3>1. Створити код, який за величиною температури за шкалою Фаренгейта обчислює
+        величину температури в градусах Цельсія і навпаки. Веб-сторінка має два текстових поля:
+    </h3>
+    
+    <ul>
+        <li>температура за Фаренгейтом</li>
+        <li>температура за Цельсієм</li>
+    </ul> 
+    <h3>які містять відповідні числа.</h3> 
+
+    <div>
+        <label for="fahrenheitInput">Температура за Фаренгейтом:</label>
+        <input type="text" id="fahrenheitInput" oninput="convertFahrenheitToCelsius()">
+    </div>
+    <p></p>
+    <div>
+        <label for="celsiusInput">Температура за Цельсієм:</label>
+        <input type="text" id="celsiusInput" oninput="convertCelsiusToFahrenheit()">
+    </div>
+
+    <script>
+        function convertFahrenheitToCelsius() {
+            var fahrenheit = parseFloat(document.getElementById('fahrenheitInput').value);
+            var celsius = (5/9) * (fahrenheit - 32);
+            document.getElementById('celsiusInput').value = celsius;
+        }
+
+        function convertCelsiusToFahrenheit() {
+            var celsius = parseFloat(document.getElementById('celsiusInput').value);
+            var fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById('fahrenheitInput').value = fahrenheit;
+        }
+    </script>
+</body>
+</html>

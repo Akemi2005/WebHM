@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+    <style>
+        #rotator {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #rotator .info {
+            margin-top: 10px;
+        }
+
+        #rotator .navigation {
+            position: relative;
+            top: 200px;
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        #rotator .navigation a {
+            font-size: 24px;
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            width: 500px;
+            height: 300px;
+            margin: 20px 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>4. Створити код для перелистування зображень.</h3>
+    <div id="rotator">
+        <div class="navigation">
+            <a id="backLink" href="#">Назад</a>
+            <a id="nextLink" href="#">Вперед</a>
+        </div>
+        <div class="text"></div>
+        <img id="imageElement" src="" alt="Image">
+        <div class="info"></div>
+    </div>
+    
+    <script>
+        let imagesArray = [
+            {
+                path: 'img/komanda1.jpg',
+                title: 'Баскетбольна команда 1',
+                description: 'Галичина',
+            },
+            {
+                path: 'img/komanda2.jpg',
+                title: 'Баскетбольна команда 2',
+                description: 'Говерла',
+            },
+            {
+                path: 'img/komanda3.jpg',
+                title: 'Баскетбольна команда 3',
+                description: 'Черкаські Мавпи',
+            },
+        ];
+
+        function initPhotoRotator(containerId, images) {
+            const container = document.getElementById(containerId);
+            const imageElement = document.getElementById('imageElement');
+            const infoElement = container.querySelector('.info');
+            const infoText = container.querySelector('.text');
+            const backLink = document.getElementById('backLink');
+            const nextLink = document.getElementById('nextLink');
+
+            let currentImageIndex = 0;
+
+            imageElement.src = images[currentImageIndex].path;
+
+            backLink.addEventListener('click', () => {
+                if (currentImageIndex > 0) {
+                    currentImageIndex--;
+                }
+                updateImage();
+            });
+
+            nextLink.addEventListener('click', () => {
+                if (currentImageIndex < images.length - 1) {
+                    currentImageIndex++;
+                }
+                updateImage();
+            });
+
+            function updateImage() {
+                imageElement.src = images[currentImageIndex].path;
+                infoText.innerHTML = `<span>Фотографія ${currentImageIndex + 1} з ${images.length}</span>`;
+                infoElement.innerHTML = `<p>${images[currentImageIndex].title}</p>`;
+                infoElement.innerHTML += `<p>${images[currentImageIndex].description}</p>`;
+            }
+
+
+            updateImage();
+        }
+
+        initPhotoRotator('rotator', imagesArray);
+    </script>
+</body>
+</html>

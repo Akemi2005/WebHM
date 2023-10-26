@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pixelify+Sans:wght@500&display=swap');
+    </style>
+    <style>
+        .captcha-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .captcha {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            width: 150px;
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+
+        #captchaMessage {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3>Напишіть код для реалізації captcha. Алгоритм роботи капчі наступний:</h3>
+    <ul>
+        <li>на вхід функції ініціалізації капчі передається ціле число – кількість цифр у капчі;</li>
+        <li>випадковим чином генерується відповідна кількість цифр;</li>
+        <li>число відображається у вигляді «набору пікселів» (span-блоки);</li>
+        <li>користувач вводить число у текстове поле;</li>
+        <li>відбувається перевірка правильності введення числа і відображається відповідне повідомлення;</li>
+    </ul>
+    <div class="captcha-container">
+        <div class="captcha" id="captcha"></div>
+        <input type="text" id="captchaInput" placeholder="Введіть число">
+        <button onclick="checkCaptcha()">Перевірити</button>
+        <p id="captchaMessage"></p>
+    </div>
+
+    <script>
+        // Функція для генерації випадкової CAPTCHA
+        function generateCaptcha(length) {
+            let captcha = '';
+            for (let i = 0; i < length; i++) {
+                captcha += Math.floor(Math.random() * 10);
+            }
+            return captcha;
+        }
+
+        // Функція для відображення CAPTCHA
+        function displayCaptcha() {
+            const captchaElement = document.getElementById('captcha');
+            const captchaValue = generateCaptcha(2);
+            captchaElement.innerHTML = '';
+            for (let i = 0; i < captchaValue.length; i++) {
+                const pixel = document.createElement('span');
+                pixel.textContent = captchaValue[i];
+                captchaElement.appendChild(pixel);
+            }
+        }
+
+        // Функція для перевірки введеного значення
+        function checkCaptcha() {
+            const captchaInput = document.getElementById('captchaInput');
+            const captchaMessage = document.getElementById('captchaMessage');
+            const captchaValue = document.getElementById('captcha').textContent;
+            const inputValue = captchaInput.value;
+
+            if (inputValue === captchaValue) {
+                captchaMessage.textContent = 'Ви ввели правильну CAPTCHA!';
+                captchaMessage.style.color = 'green';
+            } else {
+                captchaMessage.textContent = 'Спробуйте ще раз. Неправильна CAPTCHA.';
+                captchaMessage.style.color = 'red';
+                // Оновлюємо CAPTCHA
+                displayCaptcha();
+                captchaInput.value = '';
+            }
+        }
+
+        // Ініціалізуємо CAPTCHA при завантаженні сторінки
+        window.addEventListener('load', () => {
+            displayCaptcha();
+        });
+    </script>
+</body>
+</html>
