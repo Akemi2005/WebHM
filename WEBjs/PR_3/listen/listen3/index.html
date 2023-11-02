@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+    <style>
+        .field {
+            width: 600px;
+            height: 500px;
+            position: relative;
+            border: 5px solid grey;
+            overflow: hidden;
+            background-color: greenyellow;
+        }
+
+        #ball {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s; /* Додано перехід для анімації */
+            background-color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>3. При кліці по полю м'яч повинен переміщатись на місце кліка.</h2>
+    <div class="field">
+        <img id="ball" src="../listen3/img/ball.png" alt="ball">
+    </div>
+    <script>
+        const field = document.querySelector('.field');
+        const ball = document.getElementById('ball');
+
+        // Додаємо обробник події при кліку на поле
+        field.addEventListener('click', (event) => {
+            // Отримуємо координати курсора миші відносно поля
+            const offsetX = event.clientX - field.getBoundingClientRect().left;
+            const offsetY = event.clientY - field.getBoundingClientRect().top;
+
+            // Розраховуємо нові координати м'яча, щоб він був центром під курсором
+            const ballX = offsetX - ball.clientWidth / 2;
+            const ballY = offsetY - ball.clientHeight / 2;
+
+            // Обмежуємо переміщення м'яча, щоб він не вилітав за межі поля
+            const maxX = field.clientWidth - ball.clientWidth;
+            const maxY = field.clientHeight - ball.clientHeight;
+
+            if (ballX < 0) {
+                ballX = 0;
+            } else if (ballX > maxX) {
+                ballX = maxX;
+            }
+
+            if (ballY < 0) {
+                ballY = 0;
+            } else if (ballY > maxY) {
+                ballY = maxY;
+            }
+
+            // Встановлюємо нові координати м'яча з використанням CSS-трансформацій
+            ball.style.transform = `translate(${ballX}px, ${ballY}px)`;
+        });
+    </script>
+</body>
+</html>

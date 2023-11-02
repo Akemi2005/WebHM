@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+    <style>
+        .carousel-container {
+            margin: 0 auto;
+            position: relative;
+            width: 60%;
+            overflow: hidden;
+            background-color: lightgrey;
+            border-radius: 20px;
+        }
+
+        .carousel {
+            width: 9999px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        .image-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .image-list li {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .image-list img {
+            display: block;
+            max-width: 130px;
+            height: auto;
+            padding-left: 65px;
+            padding: 20px 0 20 65px;
+        }
+
+        .prev-button,
+        .next-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px 12px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .prev-button {
+            left: 0;
+        }
+
+        .next-button {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Реалізувати «Карусель» - стрічку зображень, яку можна гортати вліво-вправо
+        натисненням на стрілки.</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <ul class="image-list">
+                <li><img src="../listen2/img/image1.png" alt="Image 1"></li>
+                <li><img src="../listen2/img/image2.png" alt="Image 2"></li>
+                <li><img src="../listen2/img/image3.png" alt="Image 3"></li>
+                <li><img src="../listen2/img/image4.png" alt="Image 4"></li>
+                <li><img src="../listen2/img/image5.png" alt="Image 5"></li>
+                <li><img src="../listen2/img/image6.png" alt="Image 6"></li>
+                <li><img src="../listen2/img/image7.png" alt="Image 7"></li>
+                <li><img src="../listen2/img/image8.png" alt="Image 8"></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button class="prev-button">←</button>
+            <button class="next-button">→</button>            
+        </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var carousel = document.querySelector(".carousel");
+        var prevButton = document.querySelector(".prev-button");
+        var nextButton = document.querySelector(".next-button");
+
+        var imageList = document.querySelector(".image-list");
+        var imageWidth = 200; // Фіксований розмір одного зображення
+        var currentPosition = 0;
+        var maxPosition = -(imageWidth * (imageList.children.length - 3)); // Вираховуємо максимальну позицію
+
+        prevButton.addEventListener("click", function() {
+            if (currentPosition < 0) {
+                currentPosition += imageWidth;
+                carousel.style.marginLeft = currentPosition + "px";
+            }
+        });
+
+        nextButton.addEventListener("click", function() {
+            if (currentPosition > maxPosition) {
+                currentPosition -= imageWidth;
+                carousel.style.marginLeft = currentPosition + "px";
+            }
+        });
+    });
+</script>
+</body>
+</html>

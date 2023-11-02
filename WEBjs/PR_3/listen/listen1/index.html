@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        li {
+            list-style: none;
+            background-color: lightyellow;
+            width: 480px;
+            border: 1px solid yellow;
+            padding: 18px;
+        }
+        img {
+            width: 30px;
+            margin: 7px 15px -7px;
+        }
+        h3 {
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+    <body>
+        <h2>1. Є список повідомлень. Додати до кожного повідомлення по кнопці для його
+            приховування.</h2>
+        <ul id="message-list">
+            <li>
+                <h3>Android</h3>
+                <p>
+                    Android — операційна система і платформа для мобільних телефонів та планшетних комп'ютерів, 
+                    створена компанією Google на базі ядра Linux. Підтримується альянсом Open Handset Alliance (OHA).                
+                </p>
+                <a href="#" class="hide-button"><img src="../listen1/img/close.png" alt="close"></a>
+            </li>
+            <li>
+                <h3>Mac OS</h3>
+                <p>
+                    macOS — пропрієтарна графічна операційна система корпорації Apple Inc. Перший випуск відбувся у 2001 році. 
+                    У 2023 році, вона займає друге місце за популярністю у світі операційних систем серед ринку комп‘ютерів та ноутбуків, 
+                    поступаючись Microsoft Windows, але випереджаючи Linux (рахуючи з ChromeOS).                
+                </p>
+                <a href="#" class="hide-button"><img src="../listen1/img/close.png" alt="close"></a>
+            </li>
+            <li>
+                <h3>Windows Phone</h3>
+                <p>
+                    Windows Phone (кодова назва «Photon») — велике оновлення Windows Mobile, що вийшло 11 жовтня 2010 року.
+                    Дана система є повністю новою, з повністю новим інтерфейсом і — вперше — з інтеграцією сервісів Microsoft Xbox Live і Zune. 
+                    Презентація системи відбулася в рамках заходу Mobile World Congress, що проходить у Барселоні.   
+                </p>
+                <a href="#" class="hide-button"><img src="../listen1/img/close.png" alt="close"></a>
+            </li>
+        </ul>
+        <script>
+            // Отримуємо всі кнопки "Приховати" та повідомлення
+            const hideButtons = document.querySelectorAll('.hide-button');
+            const messageList = document.getElementById('message-list');
+    
+            // Додаємо обробник подій до кожної кнопки
+            hideButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    // Отримуємо батька (повідомлення) кнопки і видаляємо його
+                    const message = button.parentNode;
+                    messageList.removeChild(message);
+                });
+            });
+        </script>    
+    </body>
+</html>
