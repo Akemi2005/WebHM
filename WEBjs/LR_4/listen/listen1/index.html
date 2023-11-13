@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Semeniuk</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">border-radius</div>
+        <div class="tab">text-indent</div>
+        <div class="tab">text-shadow</div>
+        <div class="tabContent">
+            <div>Верхній лівий радіус:
+                <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="ttl" value="0">
+            </div>
+            <div>Верхній правий радіус:
+                <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="ttr" value="0">
+            </div>
+            <div>Нижній лівий радіус:
+                <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="tbl" value="0">
+            </div>
+            <div>Нижній правий радіус:
+                <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="tbr" value="0">
+            </div>    
+            <div id="block"></div>
+            <textarea id="cssCode" readonly></textarea>            
+        </div>
+        <div class="tabContent">
+            <div id="text">Text to Apply Indent</div>
+            <div id="indentControls">
+              <label for="textIndent">Text Indent:</label>
+              <input type="number" id="textIndent" value="20" oninput="applyTextIndent()">
+            </div>
+            <textarea id="cssCode2" readonly></textarea>
+        </div>
+        <div class="tabContent">
+            <div id="text2">Text to Apply Shadow</div>
+            <div id="shadowControls">
+              <label for="offsetX">Offset X:</label>
+              <input type="number" id="offsetX" value="2" oninput="applyTextShadow()">
+          
+              <label for="offsetY">Offset Y:</label>
+              <input type="number" id="offsetY" value="2" oninput="applyTextShadow()">
+          
+              <label for="blurRadius">Blur Radius:</label>
+              <input type="number" id="blurRadius" value="4" oninput="applyTextShadow()">
+          
+              <label for="shadowColor">Shadow Color:</label>
+              <input type="color" id="shadowColor" value="#000000" onchange="applyTextShadow()">
+            </div>
+            <textarea id="cssCode3" readonly></textarea>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
