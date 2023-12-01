@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50%;
-    height: 100vh;
+    padding: 30px;
 }
 
 .tasks {
