@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR 5</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous"/>
+</head>
+<body>
+    <div id="shoppingCart" class="cart-icon">
+        <i class="fas fa-shopping-cart shopping-cart-img"></i>
+        <span id="cartItemCount" class="cart-item-count">0</span>
+    </div>
+    <div id="cartModal" class="modal">
+        <div>
+            Корзина пуста
+            <span class="close" onclick="closeCartModal()">&times;</span>
+        </div>
+    </div>
+    <div class="quantity-modal modal" id="quantityModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuantityModal()">&times;</span>
+            <h2>Введіть кількість</h2>
+            <label for="quantityInput">Кількість:</label>
+            <input type="number" id="quantityInput" min="1" value="1">
+            <button onclick="addToCartModal()">Додати до корзини</button>
+        </div>
+    </div>
+    <h1>обов'язково додайте своє замовлення</h1>
+    <div class="wrap">
+        <div class="swipe swipeleft">&#60;</div>
+        <div class="swipe swiperight">&#62;</div>
+        <div class="panel">
+            <div class="note new">
+                <span>новинка</span>
+            </div>
+            <div class="categor">
+                <a href="https://rozetka.com.ua/ua/search/?text=камера" >
+                    Камера 
+                </a>
+            </div>
+            <hr>
+            <div class="picture">
+                <a href="https://rozetka.com.ua/ua/fujifilm-16768850/p360806091/">
+                    <img src="https://content.rozetka.com.ua/goods/images/big/299942170.jpg" alt="camera">
+                </a>
+            </div>
+            <div class="prod">
+                <a href="https://shorturl.at/bjsu7" title="Біле поло" >
+                    Fujifilm Instax Mini 11
+                </a>
+            </div>
+            <div class="costs">
+                <span class="price"></span>
+                <span class="discount-price"></span>
+            </div>
+            <div>
+                <a class="btn soon" href="#">
+                    незабаром у продажі
+                </a>
+            </div>
+        </div>
+         <div class="panel">
+            <div class="categor">
+                <a href="https://rozetka.com.ua/ua/photo/c80001/?gclid=Cj0KCQjwgLOiBhC7ARIsAIeetVChv6rzHoXXip7X-aCa_HCNOEd02RRZ2VxJKdebF5xsGtHeSp3X9qsaAodYEALw_wcB" >
+                    Фотоапарат
+                </a>
+            </div>
+            <hr>
+            <div class="picture">
+                <a href="https://rozetka.com.ua/ua/canon_1483c030/p17682750/">
+                    <img src="https://content.rozetka.com.ua/goods/images/big/11017853.jpg" alt="img">
+                </a>
+            </div>
+            <div class="prod bold">
+                <a href="https://rozetka.com.ua/ua/canon_1483c030/p17682750/" title="фотоапарат" class="prod">
+                    Canon EOS 5D Mark
+                </a>
+            </div>
+            <div class="costs bold">
+                <span class="discount-price">144599 грн</span>
+                <span class="price">125999 грн</span>
+            </div>
+            <div>
+                <a class="btn avl bold" href="#">у корзину</a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="note hit">
+                <span>хіт продажів</span>
+            </div>
+            <div class="categor">
+                <a href="https://rozetka.com.ua/ua/search/?text=фотоплівка" >
+                    Фотоплівка
+                </a>
+            </div>
+            <hr>
+            <div class="picture">
+                <a href="https://rozetka.com.ua/ua/375975987/p375975987/">
+                    <img src="https://content1.rozetka.com.ua/goods/images/big/329592843.jpg" alt="img">
+                </a>
+            </div>
+            <div class="prod bold">
+                <a href="https://rozetka.com.ua/ua/375975987/p375975987/" title="фотоплівка">
+                    Polaroid Color film
+                </a>
+            </div>
+            <div class="costs bold">
+                <span class="discount-price"></span>
+                <span class="price">1100 грн</span>
+            </div>
+            <div>
+                <a class="btn avl bold" href="#">у корзину</a>
+            </div>
+        </div>
+         <div class="panel">
+            <div class="note hit">
+                <span>хіт продажів</span>
+            </div>
+            <div class="categor">
+                <a href="https://rozetka.com.ua/ua/search/?text=Медіамодуль&section_id=179179">
+                    Медіамодуль
+                </a>
+            </div>
+            <hr>
+            <div class="picture">
+                <a href="https://rozetka.com.ua/ua/gopro_adfmd_001/p332234662/">
+                    <img src="https://content1.rozetka.com.ua/goods/images/big/247406741.jpg" alt="img">
+                </a>
+            </div>
+            <div class="prod bold">
+                <a href="https://rozetka.com.ua/ua/gopro_adfmd_001/p332234662/" title="фотоплівка">
+                    GoPro
+                </a>
+            </div>
+            <div class="costs bold">
+                <span class="discount-price"></span>
+                <span class="price">5799 грн</span>
+            </div>
+            <div>
+                <a class="btn avl bold" href="#">у корзину</a>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>  
+</body>
+</html>

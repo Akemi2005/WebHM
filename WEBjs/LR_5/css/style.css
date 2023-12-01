@@ -1,0 +1,169 @@
+body{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.wrap{
+    width: 1200px;
+    height: 500px;
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+    position: relative;
+    margin-top: 75px;
+    border: 1px solid lightgray;
+}
+.panel{
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    align-items: stretch;
+    border: 1px solid lightgray;
+}
+.categor{
+    height: 90px;
+    line-height: 90px;
+    margin-top: 10px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.categor a{
+    color: seagreen;
+    font-size: 20px;
+}
+hr{
+    width: 90%;
+    border: 1px solid lightgray;
+}
+.picture, .prod{
+    margin: 25px 0;
+}
+.costs{
+    height: 50px;
+    font-size: 18px;
+}
+.prod a, .prod, .prod a:hover{
+    color: seagreen;
+    font-size: 19px;
+}
+img {
+    height: 150px;
+}
+.discount-price{
+    text-decoration: line-through;
+    font-size: 14px;
+}
+.btn{
+    width: 180px;
+    height: 50px;
+    background-color: beige;
+    margin: auto;
+    font-weight: bold;
+}
+.soon{
+    background-color: forestgreen;
+    color: white;
+    pointer-events: none;
+}
+.avl{
+    background-color: lightgreen;
+    color:black;
+}
+.soon a, .note{
+    color: white;
+    
+}
+.bold{
+    font-weight: bold;
+}
+.swipe{
+    position: absolute;
+    top: 93px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 30px;
+    color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    background-color: white;
+    z-index: 1;
+}
+.swiperight{
+    right: -15px;
+}
+.swipeleft{
+    left: -15px;
+}
+.note {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    font-size: 12px;
+    border-radius: 100%;
+    right: 5px;
+    top: -30px;
+}
+.note, .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hit{
+    background-color: hotpink;
+}
+.new{
+    background-color: darkolivegreen;  
+}
+.prod{
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-overflow: ellipsis;
+}
+.prod a:hover{
+    text-decoration: underline;
+}
+
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    padding: 15px;
+    gap: 30px;
+}
+
+.modal {
+    width: 500px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.close {
+    position: absolute;
+    top: -2px;
+    right: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
