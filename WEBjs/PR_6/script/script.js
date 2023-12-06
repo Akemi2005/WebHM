@@ -1,4 +1,4 @@
-const requestURL = '';
+const requestURL = 'https://github.com/Akemi2005/WebHM/blob/main/WEBjs/PR_6/json/file.json';
 const header = document.querySelector('header')
 const section = document.querySelector('section')
 const request = new XMLHttpRequest();
