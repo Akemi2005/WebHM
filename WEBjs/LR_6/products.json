@@ -1,0 +1,47 @@
+[
+    {
+      "name": "Fujifilm Instax Mini 11",
+      "category": "Камера",
+      "image": "https://content.rozetka.com.ua/goods/images/big/299942170.jpg",
+      "link": "https://shorturl.at/bjsu7",
+      "new": true,
+      "bestseller": false,
+      "discount": false,
+      "available": false,
+      "price": 0
+    },
+    {
+        "name": "CANON EOS 5D MARK",
+        "category": "Фотоапарат",
+        "image": "https://content.rozetka.com.ua/goods/images/big/11017853.jpg",
+        "link": "https://shorturl.at/bjsu7",
+        "new": false,
+        "bestseller": false,
+        "discount": true,
+        "available": true,
+        "price": 125999
+      },
+      {
+        "name": "Polaroid Color film",
+        "category": "Фотоплівка",
+        "image": "https://content1.rozetka.com.ua/goods/images/big/329592843.jpg",
+        "link": "https://shorturl.at/bjsu7",
+        "new": false,
+        "bestseller": true,
+        "discount": false,
+        "available": true,
+        "price": 1100
+      },
+      {
+        "name": "GOPRO",
+        "category": "Медіамодуль",
+        "image": "https://content1.rozetka.com.ua/goods/images/big/247406741.jpg",
+        "link": "https://shorturl.at/bjsu7",
+        "new": false,
+        "bestseller": true,
+        "discount": false,
+        "available": true,
+        "price": 5799
+      }
+  ]
+  
