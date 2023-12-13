@@ -47,17 +47,6 @@
         "discountPrice": null
       },
     {
-      "name": "Fujifilm Instax Mini 11",
-      "category": "Камера",
-      "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/inst.webp",
-      "link": "https://rozetka.com.ua/ua/fujifilm-16768850/p360806091/",
-      "new": true,
-      "bestseller": false,
-      "discount": false,
-      "available": false,
-      "price": null
-    },
-    {
         "name": "CANON EOS 5D MARK",
         "category": "Фотоапарат",
         "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/canon.webp",
