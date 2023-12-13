@@ -57,5 +57,17 @@
         "available": true,
         "price": 1799,
         "discountPrice": 2299
+      },
+      {
+        "name": "Logitech WebCam C270",
+        "category": "Веб-камера",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/tplink.webp",
+        "link": "https://rozetka.com.ua/ua/logitech_webcam_c270/p100516/",
+        "new": false,
+        "bestseller": false,
+        "discount": false,
+        "available": true,
+        "price": 1399,
+        "discountPrice": null
       }
 ]
