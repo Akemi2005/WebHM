@@ -53,10 +53,10 @@
         "link": "https://rozetka.com.ua/ua/tp_link_tapo_c310/p310630208/",
         "new": false,
         "bestseller": true,
-        "discount": false,
+        "discount": true,
         "available": true,
         "price": 1 799,
         "discountPrice": 2 299
-      },
+      }
   ]
   
