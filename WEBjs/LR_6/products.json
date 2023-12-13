@@ -75,11 +75,23 @@
         "category": "Веб-камера",
         "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/web2.webp",
         "link": "https://rozetka.com.ua/ua/logitech-960-001623/p395429313/",
-        "new": true,
+        "new": false,
         "bestseller": false,
         "discount": false,
         "available": true,
         "price": 1599,
+        "discountPrice": null
+      },
+      {
+        "name": "Vdscam IpCam HD",
+        "category": "Міні камера",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/miniweb.webp",
+        "link": "https://rozetka.com.ua/ua/334463752/p334463752/",
+        "new": false,
+        "bestseller": false,
+        "discount": false,
+        "available": true,
+        "price": 1499,
         "discountPrice": null
       }
 ]
