@@ -46,41 +46,17 @@
         "price": 5799,
         "discountPrice": null
       },
-    {
-        "name": "CANON EOS 5D MARK",
-        "category": "Фотоапарат",
-        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/canon.webp",
-        "link": "https://rozetka.com.ua/ua/360327093/p360327093/",
-        "new": false,
-        "bestseller": false,
-        "discount": true,
-        "available": true,
-        "price": 126000,
-        "discountPrice": 148175
-      },
       {
-        "name": "Polaroid Color film",
-        "category": "Фотоплівка",
-        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/polar.webp",
-        "link": "https://rozetka.com.ua/ua/polaroid-6015/p360647340/",
+        "name": "TP-LINK Tapo C310",
+        "category": "IP-камери",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/tplink.webp",
+        "link": "https://rozetka.com.ua/ua/tp_link_tapo_c310/p310630208/",
         "new": false,
         "bestseller": true,
         "discount": false,
         "available": true,
-        "price": 1100,
-        "discountPrice": null
+        "price": 1 799,
+        "discountPrice": 2 299
       },
-      {
-        "name": "GOPRO",
-        "category": "Медіамодуль",
-        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/gopro.webp",
-        "link": "https://rozetka.com.ua/ua/gopro_adfmd_001/p332234662/",
-        "new": false,
-        "bestseller": true,
-        "discount": false,
-        "available": true,
-        "price": 5799,
-        "discountPrice": null
-      }
   ]
   
