@@ -2,7 +2,7 @@
     {
       "name": "Fujifilm Instax Mini 11",
       "category": "Камера",
-      "image": "https://content.rozetka.com.ua/goods/images/big/299942170.jpg",
+      "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/inst.webp",
       "link": "https://shorturl.at/bjsu7",
       "new": true,
       "bestseller": false,
@@ -13,7 +13,7 @@
     {
         "name": "CANON EOS 5D MARK",
         "category": "Фотоапарат",
-        "image": "https://content.rozetka.com.ua/goods/images/big/11017853.jpg",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/canon.webp",
         "link": "https://shorturl.at/bjsu7",
         "new": false,
         "bestseller": false,
@@ -24,7 +24,7 @@
       {
         "name": "Polaroid Color film",
         "category": "Фотоплівка",
-        "image": "https://content1.rozetka.com.ua/goods/images/big/329592843.jpg",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/polar.webp",
         "link": "https://shorturl.at/bjsu7",
         "new": false,
         "bestseller": true,
@@ -35,7 +35,7 @@
       {
         "name": "GOPRO",
         "category": "Медіамодуль",
-        "image": "https://content1.rozetka.com.ua/goods/images/big/247406741.jpg",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/gopro.webp",
         "link": "https://shorturl.at/bjsu7",
         "new": false,
         "bestseller": true,
