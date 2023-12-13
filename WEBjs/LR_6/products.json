@@ -45,6 +45,53 @@
         "available": true,
         "price": 5799,
         "discountPrice": null
+      },
+    {
+      "name": "Fujifilm Instax Mini 11",
+      "category": "Камера",
+      "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/inst.webp",
+      "link": "https://rozetka.com.ua/ua/fujifilm-16768850/p360806091/",
+      "new": true,
+      "bestseller": false,
+      "discount": false,
+      "available": false,
+      "price": null
+    },
+    {
+        "name": "CANON EOS 5D MARK",
+        "category": "Фотоапарат",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/canon.webp",
+        "link": "https://rozetka.com.ua/ua/360327093/p360327093/",
+        "new": false,
+        "bestseller": false,
+        "discount": true,
+        "available": true,
+        "price": 126000,
+        "discountPrice": 148175
+      },
+      {
+        "name": "Polaroid Color film",
+        "category": "Фотоплівка",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/polar.webp",
+        "link": "https://rozetka.com.ua/ua/polaroid-6015/p360647340/",
+        "new": false,
+        "bestseller": true,
+        "discount": false,
+        "available": true,
+        "price": 1100,
+        "discountPrice": null
+      },
+      {
+        "name": "GOPRO",
+        "category": "Медіамодуль",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/gopro.webp",
+        "link": "https://rozetka.com.ua/ua/gopro_adfmd_001/p332234662/",
+        "new": false,
+        "bestseller": true,
+        "discount": false,
+        "available": true,
+        "price": 5799,
+        "discountPrice": null
       }
   ]
   
