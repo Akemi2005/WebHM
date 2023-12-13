@@ -79,7 +79,7 @@
         "bestseller": false,
         "discount": false,
         "available": true,
-        "price": 1 599,
+        "price": 1599,
         "discountPrice": null
       },
       {
@@ -91,7 +91,7 @@
         "bestseller": false,
         "discount": false,
         "available": true,
-        "price": 1 499,
+        "price": 1499,
         "discountPrice": null
       }
 ]
