@@ -45,18 +45,6 @@
         "available": true,
         "price": 5799,
         "discountPrice": null
-      },
-      {
-        "name": "TP-LINK Tapo C310",
-        "category": "IP-камери",
-        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/tplink.webp",
-        "link": "https://rozetka.com.ua/ua/tp_link_tapo_c310/p310630208/",
-        "new": false,
-        "bestseller": true,
-        "discount": true,
-        "available": true,
-        "price": 1 799,
-        "discountPrice": 2 299
       }
   ]
   
