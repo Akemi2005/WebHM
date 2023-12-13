@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR 6</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous"/>
+</head>
+<body>
+    <div id="shoppingCart" class="cart-icon">
+        <i class="fas fa-shopping-cart shopping-cart-img"></i>
+        <span id="cartItemCount" class="cart-item-count">0</span>
+    </div>
+    <div id="cartModal" class="modal">
+        <div>
+            Корзина пуста
+            <span class="close" onclick="closeCartModal()">&times;</span>
+        </div>
+    </div>
+    <div class="quantity-modal modal" id="quantityModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuantityModal()">&times;</span>
+            <h2>Введіть кількість</h2>
+            <label for="quantityInput">Кількість:</label>
+            <input type="number" id="quantityInput" min="1" value="1">
+            <button onclick="addToCartModal()">Додати до корзини</button>
+        </div>
+    </div>
+    <h1>обов'язково додайте своє замовлення</h1>
+    <div class="swipers">
+        <div class="swipe swipeleft" onclick="prevProduct()">&#60;</div>
+        <div class="swipe swiperight" onclick="nextProduct()">&#62;</div>
+        <div class="wrap" id="productCarousel"></div>           
+    </div>  
+    <script src="script/script.js" defer></script>
+</body>
+</html>
