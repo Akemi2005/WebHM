@@ -7,7 +7,8 @@
       "new": true,
       "bestseller": false,
       "discount": false,
-      "available": false
+      "available": false,
+      "price": null
     },
     {
         "name": "CANON EOS 5D MARK",
@@ -18,7 +19,8 @@
         "bestseller": false,
         "discount": true,
         "available": true,
-        "price": 125999
+        "price": 125999,
+        "discountPrice": 148175
       },
       {
         "name": "Polaroid Color film",
@@ -29,7 +31,8 @@
         "bestseller": true,
         "discount": false,
         "available": true,
-        "price": 1100
+        "price": 1100,
+        "discountPrice": null
       },
       {
         "name": "GOPRO",
@@ -40,7 +43,8 @@
         "bestseller": true,
         "discount": false,
         "available": true,
-        "price": 5799
+        "price": 5799,
+        "discountPrice": null
       }
   ]
   
