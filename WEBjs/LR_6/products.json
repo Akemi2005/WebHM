@@ -46,7 +46,7 @@
         "price": 5799,
         "discountPrice": null
       },
-    {
+      {
         "name": "TP-LINK Tapo C310",
         "category": "IP-камери",
         "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/tplink.webp",
@@ -68,6 +68,18 @@
         "discount": false,
         "available": true,
         "price": 1399,
+        "discountPrice": null
+      },
+      {
+        "name": "Logitech Brio 100",
+        "category": "Веб-камера",
+        "image": "https://raw.githubusercontent.com/Akemi2005/WebHM/main/WEBjs/LR_6/img/web2.webp",
+        "link": "https://rozetka.com.ua/ua/logitech-960-001623/p395429313/",
+        "new": true,
+        "bestseller": false,
+        "discount": false,
+        "available": true,
+        "price": 1599,
         "discountPrice": null
       }
 ]
